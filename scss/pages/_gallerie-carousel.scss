@@ -11,12 +11,12 @@ body {
 }  
 
 main {
-  max-width: 800px; 
+  max-width: 900px; 
   margin: 20px;
   padding: 20px;
   background-color: $bg-color;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 90%; 
+  width: 150%; 
 }
 
 .carousel {
@@ -30,71 +30,80 @@ main {
     color: $primary-color;
     margin-top: 20px;
   }    
-}
+
  
 
-.images {
-  position: relative; 
-  overflow: hidden;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 15px; 
-  height: 400px; 
-}
+  .images {
+    position: relative; 
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px; 
+    height: 400px; 
+
     
-.image {
-  min-width: 100%; 
-  box-sizing: border-box; 
-  text-align: center;
-}
+    .image {
+      display: none; 
+      width: 100%;
+      height: 100%; 
+      margin: 0; 
+
+        &.active {
+          display: block; 
+        }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+        display: block;
+      }
+
+      figcaption {
+        padding: 8px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        font-style: italic;
+        position: absolute; 
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
 
 
-img {
-  width: 100%;
-  height: 400%;
-  object-fit:cover;
-  display: block;
-}
 
-figcaption {
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  font-style: italic;
-  position: absolute; 
-  bottom: 0;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: $primary-color;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  position: absolute;
+  button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    
+    top: 50%;
+    transform: none;
+    transition: background-color 0.3s ease;
   
-  top: 50%;
-  transform: none;
- 
 
-&#prev {
-  display: inline-block;
-  left: 10px;
-}
+  &#prev {
+    display: inline-block;
+    left: 10px;
+  }
 
-&#next {
-  display: inline-block;
-  right: 10px;
-}
+  &#next {
+    display: inline-block;
+    right: 10px;
+  }
 
-&:hover {
-  background-color: darken($primary-color, 10%);
-}
-}
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+  }
 
 }
