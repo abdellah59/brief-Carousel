@@ -1,0 +1,14 @@
+header {
+    width: 100%;
+    background: $bg-color;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+
+    h1 {
+        font-size: 2em;
+        font-family: $font-family;
+        font-weight: bold;
+        align-self: center;
+    }
+}
