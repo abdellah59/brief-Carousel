@@ -5,4 +5,31 @@
     border-radius: $border-radius;
     box-shadow: $shadow;
     background-color: $light-color;
+
+
+    .images {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .image {
+        min-width: 100%;
+        text-align: center; 
+
+    }
+
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    figcaption {
+        padding: 0.5rem;
+        background-color: $caption-bg;
+        color: $light-color;
+        font-size: 0.9rem;
+    }
+
 }
