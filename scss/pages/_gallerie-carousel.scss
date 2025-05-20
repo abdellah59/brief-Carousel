@@ -1,55 +1,58 @@
 
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-
-}
-
 body {
   font-family: $font-family;
   margin: 0;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
   background-color: $bg-color;
 }  
 
-.carousel {
-  width: 80%;
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: $border-radius;
-  border: 1px;
-  overflow: hidden;
-  position: relative;
-  background-color: white;
-  padding-bottom: 20px;
- 
+main {
+  max-width: 800px; 
+  margin: 20px;
+  padding: 20px;
+  background-color: $bg-color;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%; 
+}
 
-h2 {
+.carousel {
+
+  position: relative;
   text-align: center;
-  color: $primary-color;
-  margin-top: 20px;
-}    
+ 
+ 
+  h2 {
+    text-align: center;
+    color: $primary-color;
+    margin-top: 20px;
+  }    
+}
  
 
 .images {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+  position: relative; 
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px; 
+  height: 400px; 
 }
     
 .image {
-  width: 100%;
-  height: 400px; 
-  object-fit: cover; 
-  display: block;
+  min-width: 100%; 
+  box-sizing: border-box; 
+  text-align: center;
 }
 
 
 img {
   width: 100%;
   height: 400%;
-  object-fit: cover;
+  object-fit:cover;
   display: block;
 }
 
@@ -74,15 +77,18 @@ button {
   cursor: pointer;
   font-size: 1em;
   position: absolute;
+  
   top: 50%;
-  transform: translateY(-50%);
+  transform: none;
  
 
 &#prev {
+  display: inline-block;
   left: 10px;
 }
 
 &#next {
+  display: inline-block;
   right: 10px;
 }
 
