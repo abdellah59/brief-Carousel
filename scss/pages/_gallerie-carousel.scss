@@ -8,73 +8,87 @@
 }
 
 body {
-    font-family: $font-family;
-    display: grid;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    background-color: $bg-color;
-  }
+  font-family: $font-family;
+  margin: 0;
+  padding: 20px;
+  background-color: $bg-color;
+}  
 
-    .carousel {
-    position: relative;
-    width: 800px;
-    overflow: hidden;
-    border-radius: $border-radius;
-    box-shadow: $shadow;
-    background-color: $light-color;
+.carousel {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: $border-radius;
+  border: 1px;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+  padding-bottom: 20px;
+ 
 
-    h2 {
-        font-size: 1.5em;
-        font-family: $font-family;
-        font-weight: bold;
-        align-self: center;
-    }    
+h2 {
+  text-align: center;
+  color: $primary-color;
+  margin-top: 20px;
+}    
+ 
 
-
-    .images {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
-
-    .image {
-        min-width: 100%;
-        text-align: center; 
-
-    }
-
-
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    figcaption {
-        padding: 0.5rem;
-        background-color: $caption-bg;
-        color: $light-color;
-        font-size: 0.9rem;
-    }
-
-     button {
-    position: absolute;
-    bottom: 1px;
-    padding: 8px 16px;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 4px;
-
-    &#next {
-      right: 10px;
-    }
-
-    &#prev {
-      left: 10px;
-    }
-  }
-
+.images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
     
+.image {
+  width: 100%;
+  height: 400px; 
+  object-fit: cover; 
+  display: block;
+}
+
+
+img {
+  width: 100%;
+  height: 400%;
+  object-fit: cover;
+  display: block;
+}
+
+figcaption {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-style: italic;
+  position: absolute; 
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+ 
+
+&#prev {
+  left: 10px;
+}
+
+&#next {
+  right: 10px;
+}
+
+&:hover {
+  background-color: darken($primary-color, 10%);
+}
+}
 
 }
