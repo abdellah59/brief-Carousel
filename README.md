@@ -15,7 +15,7 @@ Voici le lien : [Page Carousel](https://abdellah59.github.io/brief-Carousel/)
 
 ### En local : 
 
-1. CCloner ce dépôt sur votre machine locale.
+1. Cloner ce dépôt sur votre machine locale.
 2. Ouvrir le fichier index.html dans votre navigateur.
 3. Utiliser les boutons pour naviguer entre les images.
 
